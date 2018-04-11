@@ -1,0 +1,10 @@
+{% extends '::base.html.twig'%}
+{% block stylesheets %}
+    <link rel="stylesheet" href="{{asset('bundles/app/css/bootstrap.min.css')}}" type="text/css"/>
+{% endblock %}
+{% block body %}
+    <div class="alert alert-primary" role="alert">Bona tarda, {{nom}}!</div>
+{% endblock %}
+{% block javascripts %}
+    <script type="text/javascript" src="{{asset('bundles/app/js/bootstrap.js')}}"></script>
+{% endblock %}

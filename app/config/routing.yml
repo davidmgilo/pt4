@@ -1,0 +1,12 @@
+basic:
+    resource: "@BasicBundle/Resources/config/routing.yml"
+    prefix:   /basic
+
+app:
+    resource: "@AppBundle/Controller/"
+    type:     annotation
+
+easy_admin_bundle:
+    resource: "@EasyAdminBundle/Controller/AdminController.php"
+    type:     annotation
+    prefix:   /admin

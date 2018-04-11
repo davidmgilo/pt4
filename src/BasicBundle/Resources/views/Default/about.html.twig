@@ -1,0 +1,22 @@
+{% extends 'BasicBundle:Default:base.html.twig'%}
+{% block body %}
+    <section class="page-section about-heading">
+      <div class="container">
+        <img class="img-fluid rounded about-heading-img mb-3 mb-lg-0" src="{{asset('bundles/app/img/about.jpg')}}" alt="">
+        <div class="about-heading-content">
+          <div class="row">
+            <div class="col-xl-9 col-lg-10 mx-auto">
+              <div class="bg-faded rounded p-5">
+                <h2 class="section-heading mb-4">
+                  <span class="section-heading-upper">Lorem ipsum dolor sit amet</span>
+                  <span class="section-heading-lower">Donec et ligula</span>
+                </h2>
+                <p>Nam maximus finibus gravida. Vivamus ut condimentum ipsum, in semper metus. Donec ut justo risus. Duis quis diam convallis, rutrum est id, mollis elit. In turpis lectus, ornare et nisi eget, placerat vulputate erat. Vivamus tellus massa, fermentum ac nibh vitae, cursus aliquet dolor. In laoreet mi dolor, eget molestie ipsum laoreet quis.</p>
+                <p class="mb-0">Curabitur eget diam <em>vehicula</em> tellus dignissim eleifend. Nunc mollis vulputate est et porttitor. Donec sit amet ipsum ac lorem consectetur mattis sodales et dolor. Maecenas ac dolor feugiat, aliquet nibh non, posuere erat.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+{% endblock %}

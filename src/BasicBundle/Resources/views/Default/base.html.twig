@@ -1,0 +1,60 @@
+{% extends '::base.html.twig'%}
+{% block stylesheets %}
+    <link rel="stylesheet" href="{{asset('bundles/app/css/bootstrap.min.css')}}" type="text/css"/>
+    <link rel="stylesheet" href="{{asset('bundles/app/css/business-casual.min.css')}}" type="text/css"/>
+    <link href="https://fonts.googleapis.com/css?family=Raleway:100,100i,200,200i,300,300i,400,400i,500,500i,600,600i,700,700i,800,800i,900,900i" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Lora:400,400i,700,700i" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+{% endblock %}
+{% block header %}
+    {% set route = app.request.get('_route') %}
+    <h1 class="site-heading text-center d-none d-lg-block">
+      <span class="site-heading-upper text-primary mb-3">Nam urna nibh</span>
+      <span class="site-heading-lower">Lorem Ipsum</span>
+    </h1>
+
+    <nav class="navbar navbar-expand-lg navbar-dark py-lg-4" id="mainNav">
+      <div class="container">
+        <a class="navbar-brand text-uppercase text-expanded font-weight-bold d-lg-none" href="#">Ut facilisis ut mauris</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse offset-md-1" id="navbarResponsive">
+          <ul class="navbar-nav mx-auto">
+            <li class="{{ 'static' in route ? 'nav-item active px-lg-4' : 'nav-item px-lg-4' }}">
+              <a class="nav-link text-uppercase text-expanded" href="static">Inici
+                <span class="sr-only">(current)</span>
+              </a>
+            </li>
+            <li class="{{ 'about' in route ? 'nav-item active px-lg-4' : 'nav-item px-lg-4' }}">
+              <a class="nav-link text-uppercase text-expanded" href="about">Sobre</a>
+            </li>
+            <li class="{{ 'products' in route ? 'nav-item active px-lg-4' : 'nav-item px-lg-4' }}">
+              <a class="nav-link text-uppercase text-expanded" href="products">Idiomes</a>
+            </li>
+            <li class="{{ 'store' in route ? 'nav-item active px-lg-4' : 'nav-item px-lg-4' }}">
+              <a class="nav-link text-uppercase text-expanded" href="store">Horari</a>
+            </li>
+            <li class="{{ 'prizes' in route ? 'nav-item active px-lg-4' : 'nav-item px-lg-4' }}">
+              <a class="nav-link text-uppercase text-expanded" href="prizes">Premis</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+      <a class="nav-link text-uppercase text-expanded float-right px-lg-4" id="loginlink" href="login">Login <span class="fa fa-sign-in"></span></a>        
+    </nav>
+{% endblock %}
+{% block body %}{% endblock %}
+{% block footer %}
+    <footer class="footer text-faded text-center py-5">
+      <div class="container">
+        <p class="m-0 small">Copyright &copy; El meu lloc web 2018</p>
+      </div>
+    </footer> 
+{% endblock %}
+
+{% block javascripts %}
+    <script type="text/javascript" src="{{asset('bundles/app/js/bootstrap.js')}}"></script>
+    <script type="text/javascript" src="{{asset('bundles/app/js/jquery.js')}}"></script>
+   {% block jquery %}{% endblock %}
+{% endblock %}

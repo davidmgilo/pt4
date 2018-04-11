@@ -1,0 +1,28 @@
+basic_hola:
+    path:     /hola
+    defaults: { _controller: BasicBundle:Basic:hola }
+    methods: [GET]
+
+basic_static:
+    path:     /static
+    defaults: { _controller: BasicBundle:Basic:static }
+
+basic_about:
+    path:   /about
+    defaults: { _controller: BasicBundle:Basic:about }
+    
+basic_products:
+    path:   /products
+    defaults: { _controller: BasicBundle:Basic:products }
+
+basic_store:
+    path:   /store
+    defaults: { _controller: BasicBundle:Basic:store }
+
+basic_prizes:
+    path:   /prizes
+    defaults: { _controller: BasicBundle:Basic:prizes }
+
+basic_login:
+    path:   /login
+    defaults: { _controller: BasicBundle:Basic:login }
